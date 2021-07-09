@@ -1,0 +1,70 @@
+   
+   <%- include("../partials/header") %> 
+   <%- include("../partials/navbarRes") %> 
+<br>
+<br>
+<br>
+
+<h2 style="font-family:'Times New Roman', Times, serif; color: salmon; margin-left: 15px;">Edit Product</h2>
+<hr>
+
+
+    <form class="validate-form" novalidate action="/products/<%= editProduct._id %>?_method=PATCH " method="POST" style="margin: 20px 150px 100px 350px; border: 2px solid #ccc; padding: 20px; width: 50vw;background-image: url('https://images.unsplash.com/photo-1603926350386-e2990135cf39?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDN8aVVJc25WdGpCMFl8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+      
+        <div class="mb-3" >
+          <label for="name" class="form-label">Product Name:</label>
+          <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter Text" name="product[name]" value="<%= editProduct.name %> " required>
+          <div id="emailHelp" class="form-text"></div>
+          <div class="valid-feedback">
+            Looks good!!
+          </div>
+          <div class="invalid-feedback">
+            Please choose a Product Name.
+          </div>
+        </div>
+        <div class="mb-3" >
+            <label for="img" class="form-label">Image URL:</label>
+            <input type="text" class="form-control" id="img"  placeholder="Enter URL" name="product[img]" value="<%= editProduct.img %> " required>
+            <div id="emailHelp" class="form-text">Enter your product name here</div>
+            <div class="valid-feedback">
+              Looks good!!
+            </div>
+            <div class="invalid-feedback">
+              Please choose a URL.
+            </div>
+          </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">Price($):</label>
+          <input type="number" class="form-control" id="price" placeholder="Enter Price" name="product[price]" value="<%= editProduct.price %> " required>
+          <div class="valid-feedback">
+            Looks good!!
+          </div>
+          <div class="invalid-feedback">
+            Please add a Price Value.
+          </div>
+        </div>
+        <div class="mb-3">
+            <label for="desc" class="form-label">Product Description</label>
+            <textarea class="form-control" id="desc" rows="3"name="product[desc]" required><%= editProduct.desc %>  </textarea >
+              <div class="valid-feedback">
+                Looks good!!
+              </div>
+              <div class="invalid-feedback">
+                Please add Description.
+              </div>
+          </div>
+        <button type="submit" class="btn btn-primary">SAVE</button>
+      </form>
+
+     
+    
+
+
+
+  
+
+
+
+
+
+   <%- include("../partials/footer") %> 

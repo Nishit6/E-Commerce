@@ -1,0 +1,69 @@
+
+
+ 
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: #e45052;border: 2px solid brown;">
+        <div class="container-fluid">
+        
+        <strong><a class="navbar-brand" href="#" style="color: #ffba08;">SHOPMANIA</a></strong>  
+   
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+          
+              <a class="nav-link active" aria-current="page" href="/products" style="color: darkblue;">Home</a>
+         
+              <% if(currentUser) {%> 
+                <% if(currentUser.role === 'Retailer') {%> 
+           
+              <a class="nav-link" href="/products/new" style="color: darkblue;">Add Product</a>
+              <a class="nav-link" href="#" style="color: darkblue;">Show </a>
+            
+              <% } %> 
+              <% } %>  
+            </div>
+          </div>
+
+        </div>
+     
+        <form class="d-flex"style="margin-right: 400px;">
+          <input  style="width: 300px;" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-sm btn-outline-dark" type="submit">Search</button>
+        </form>
+
+        <div class="navbar-nav ml-auto">
+
+          <% if(!currentUser) {%> 
+          <a href="/login"class="nav-link active" style="color: darkblue;">Login</a>
+         
+          
+            <%}else{ %> 
+
+              <li class="nav-item dropdown">
+                <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"   style="color: white;" >
+                  <%- include("../partials/profile") %> 
+                </a>
+                <!-- <a href="#"class="nav-link active" style="color: darkblue;">Hello <%= currentUser.username %> </a> -->
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#" style="color: brown;">My Profile</a></li>
+                  <li><a class="dropdown-item" href="#"  style="color: brown;">My Orders</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" style="color: darkblue;" href="/logout">Logout   <%- include("../partials/logout") %>  </a></li>
+                </ul>
+              </li>  
+              </a>
+
+          <a  style="font-size: 1rem;" href="/user/<%= currentUser._id %>/cart " class="nav-link active" >
+          
+   <%- include("../partials/cartIcon") %>    
+           
+          </a>
+        
+        <% } %> 
+        </div>
+      </nav>
+    </div>
+
+      
+

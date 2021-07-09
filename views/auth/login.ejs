@@ -1,0 +1,57 @@
+  
+   <%- include("../partials/header") %> 
+   <%- include("../partials/navbarRes") %> 
+
+
+
+
+
+<%- include("../partials/flash") %> 
+    <form  class="validate-form" novalidate method="POST" action="/login"  style="margin: 60px 150px 100px 350px; border: 2px solid #ccc; padding: 20px; width: 50vw;background-image: url('https://images.unsplash.com/photo-1603926350386-e2990135cf39?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDN8aVVJc25WdGpCMFl8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+
+        <h2>Login</h2>
+        <div class="mb-3" >
+          <label for="username" class="form-label">Username:</label>
+          <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="Username" name="username" required>
+          <div id="emailHelp" class="form-text">Enter your username here</div>
+          <div class="valid-feedback">
+            Looks good!!
+          </div>
+          <div class="invalid-feedback">
+            Please add a Username Name.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password:</label>
+          <input type="password" class="form-control" id="password" placeholder="password" name="password" required>
+          <div class="valid-feedback">
+            Looks good!!
+          </div>
+          <div class="invalid-feedback">
+            Please enter password.
+          </div>
+        </div>
+      
+        <button type="submit" class="btn btn-primary">Login</button>
+        <br>
+        <br>
+        <a href="/register"> Not a User? Singup</a>
+        <br>
+        <br>
+
+       
+        <br>
+        <br>
+       <button><a href="/google">google</a></button> 
+      </form>
+    
+
+
+
+  
+
+
+
+
+
+   <%- include("../partials/footer") %> 
