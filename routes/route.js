@@ -11,6 +11,15 @@ const {authRole}  = require('../middlewares/authRole');
 
 // Getting all the products
 
+router.get('/',(req,res)=>{
+
+    res.render('products/home')
+})
+
+
+
+
+
 router.get('/products',async(req,res)=>{
 
    try {
