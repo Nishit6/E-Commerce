@@ -1,6 +1,7 @@
-if(process.env.Node_ENV!=='production'){
+if(process.env.Node_ENV!== "production"){
     require('dotenv').config();
 }
+
 
 
 
@@ -18,6 +19,7 @@ const flash = require('connect-flash');
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const cookieSession = require('cookie-session');
+const Order = require('./model/order');
 
 
 

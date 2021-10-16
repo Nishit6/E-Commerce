@@ -55,13 +55,16 @@
             <li class="list-group-item"><b> Sub-Total : <%= totalAmount %>  &#8377; </b></li>
             </ul>
             <div class="mt-3">
-            <form action="/payment_gateway/payumoney" method="POST">
-              <input type="hidden" class="amount" name="amount" value="<%= totalAmount %>" />
-              <input type="hidden" class="con" name="phone" value="<%= currentUser.mobNo %>"/>
-              <input type="hidden" name="service_provider" value="payu_paisa" />
-              <input type="hidden" class="product" name="productinfo" value="educational purpose"/>
-              <p><input type="submit" class="btn btn-success btn-md btn-block " value="Proceed to Payment" style="background-color:#03045e;"></p>
-            </form>
+              <form action="/payment_gateway/payumoney" method="POST">
+                <input class="amount" type="hidden" name="amount" value="<%=totalAmount%>"/>
+                <input class="con" type="hidden" name="phone" value="9999999999" />
+                <input type="hidden" name="service_provider" 
+                 value="payu_paisa"/>
+                <input type="hidden" class="product" name="productinfo" 
+                 value="educational purpose"/>
+                 
+                 <button class="btn btn-success">Proceed To Pay</button>
+              </form>
             </div>
         </div>
     </div>

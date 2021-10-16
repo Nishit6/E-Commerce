@@ -58,8 +58,8 @@
                   <!-- <a class="nav-link active text-capitalize li" aria-current="page" href="/user/<%= currentUser._id %>/me"> <%= currentUser.username %></a> -->
                   
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="/user/<%= currentUser._id %>/me" style="color: brown;">My Profile</a></li>
-                    <li><a class="dropdown-item" href="#"  style="color: brown;">My Orders</a></li>
+                    <li><a class="dropdown-item" href="/user/<%= currentUser._id %>/profile" style="color: brown;">My Profile</a></li>
+                    <li><a class="dropdown-item" href="/user/<%= currentUser._id %>/me"  style="color: brown;">My Orders</a></li>
                     <li><hr class="dropdown-divider"></li>
                     <li><a class="dropdown-item" style="color: darkblue;" href="/logout">Logout   <%- include("../partials/logout") %>  </a></li>
                   </ul>
