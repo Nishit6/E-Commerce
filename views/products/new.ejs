@@ -1,19 +1,23 @@
    
    <%- include("../partials/header") %> 
    <%- include("../partials/navbarRes") %> 
-<br>
-<br>
-<br>
+ 
+
 <style>
   body{
     background-color: rgb(228, 231, 209);
   }
 </style>
-<h2 style="font-family:'Times New Roman', Times, serif; color: salmon; margin-left: 15px;">Add Product Details</h2>
+<h5 class="display-5" style="margin-left: 15px;">Add Product Details</h5>
 <hr>
 
 
-    <form  class="validate-form" novalidate method="POST" action="/products"  style="margin: 60px 150px 100px 350px; border: 2px solid #ccc; padding: 20px; width: 50vw;background-image: url('https://images.unsplash.com/photo-1603926350386-e2990135cf39?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDN8aVVJc25WdGpCMFl8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+    <div class="col-lg-8">
+
+      <form  class="validate-form" novalidate method="POST" action="/products"  style="border: 2px solid #ccc; padding: 20px; background-image: url('https://images.unsplash.com/photo-1603926350386-e2990135cf39?ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDN8aVVJc25WdGpCMFl8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');">
         <div class="mb-3" >
           <label for="name" class="form-label">Product Name:</label>
           <input type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter Text" name="product[name]" required>
@@ -74,6 +78,11 @@
       </form>
     
 
+
+    </div>
+    <div class="col-lg-2"></div>
+  </div>
+</div>
 
 
   

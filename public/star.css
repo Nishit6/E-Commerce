@@ -195,3 +195,17 @@
     -webkit-transition: background-position .7s;
     transition: background-position .7s;
   }
+
+
+  .show-card{
+    width: 29rem;
+  }
+
+
+  @media all and (max-width:490px){
+
+    .show-card{
+      width: 100%;
+    }
+  }
+
