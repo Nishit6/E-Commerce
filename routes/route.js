@@ -11,12 +11,18 @@ const {authRole}  = require('../middlewares/authRole');
 
 // Getting all the products
 
-router.get('/',(req,res)=>{
+router.get('/',async(req,res)=>{
 
-    res.render('products/main')
-})
-
-
+    try {
+     const products = await Product.find({});
+    
+     res.render('products/home',{products});
+    } catch (error) {
+        console.log("error");
+        req.flash('error','Invalid Operation');
+        res.redirect('/error');
+    } 
+ })
 
 
 
