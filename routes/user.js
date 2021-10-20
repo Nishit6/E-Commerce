@@ -55,7 +55,7 @@ router.patch('/user/:id',isAuthorized,async(req,res)=>{
 
        await User.findByIdAndUpdate(req.params.id,req.body);
         req.flash('success','Updated Successfully');
-    res.redirect(`/user/${req.params.id}/me`);
+    res.redirect(`/user/${req.params.id}`);
    
 })
 module.exports = router;
