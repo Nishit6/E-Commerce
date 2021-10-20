@@ -21,7 +21,7 @@
             
               <p class="card-text"><%=showProduct.desc%></p>
     
-              <a href="/products/<%= showProduct._id %>/edit " class="btn btn-success">EDIT</a>
+           
     
               
               <form style="display: inline;padding: 3px;" class="mt-3" action="/user/<%= showProduct._id %>/cart " method="POST">
@@ -36,6 +36,7 @@
                   <% if(currentUser) {%> 
                     <% if(currentUser.role === 'Retailer') {%> 
                 <button class="btn btn-danger">DELETE</button>
+                <a href="/products/<%= showProduct._id %>/edit " class="btn btn-success">EDIT</a>
                 <% } %> 
                 <% } %>  
             </form>
